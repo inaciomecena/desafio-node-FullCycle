@@ -17,7 +17,8 @@ connection.query(createTable);
 app.get('/', async (req,res) => {
     const RANDOM = Math.floor(Math.random() * 10);
 
-    const sql = `INSERT INTO people(name) values('Inacio Mecena ${RANDOM}')`
+    //const sql = `INSERT INTO people(name) values('Inacio Mecena ${RANDOM}')`
+    const sql = `INSERT INTO people(name) values('Inacio Mecena')`
     connection.query(sql)
 
     let tableUsers = '<table><thead><tr><th>#</th><th>Name</th></tr></thead><tbody>';
@@ -43,5 +44,5 @@ app.get('/', async (req,res) => {
 })
 
     app.listen(port, () => {
-        console.log('Rodando na porta '+port)
+        console.log('Rodando na porta '+ port)
     })
